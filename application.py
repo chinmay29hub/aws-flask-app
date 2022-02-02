@@ -5,7 +5,7 @@ application = app = Flask(__name__)
 def hello():
     return render_template('index.html')
 
-@application.route("/echo", methods=['POST'])
+@application.route("/", methods=['POST'])
 def message():
     mes = request.form['text']
     message = "You said: " + mes
